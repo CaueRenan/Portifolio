@@ -1,0 +1,24 @@
+.contact-github, .contact-linkedln, .contact-whatsapp {
+    display: flex;
+    align-items: center;
+    height: 200px;
+    width: 200px;
+    border: 0;
+}
+
+.contact-github:hover .botton-git {
+    transform: rotate(35deg);
+    transition-duration: 2s;
+}
+
+.contact-linkedln:hover .botton-linkedln {
+    transform: rotate(35deg);
+    transition-duration: 2s;
+}
+
+.contact-whatsapp:hover .botton-whatsapp {
+    transform: rotate(35deg);
+    transition-duration: 2s;
+}
+
+
