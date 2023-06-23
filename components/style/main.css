@@ -1,4 +1,137 @@
-.contact-github, .contact-linkedln, .contact-whatsapp {
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    background-color: #dbd1d0;
+    width: 100%;
+}
+
+header {
+    display: flex;
+    width: 100%;
+    height: 90px;
+    justify-content:space-between;
+    align-items: center;
+}
+
+header a {
+    text-decoration: none;
+    color: #330d29;
+    background-color: #a8d53e;
+    padding: 7px;
+    border: 1px solid;
+    border-radius: 10px;
+
+}
+
+.links-header {
+    display: flex;
+    background-color: #ccc3c2;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    gap: 10em;
+    box-shadow: 8px 0px 15px 4px #a09c9c;
+}
+
+.contact {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+    align-items: center;
+    gap: 80px;
+    background-color: #9b63d2;
+    box-shadow: 2px 10px 15px 3px #a09c9c;
+}
+
+
+main {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    justify-content: space-between;
+}
+
+.presentation {
+    display: flex;
+    align-items: top;
+    justify-content: center;
+    float: left;
+    width: 50%;
+    padding-top: 60px;
+    background-color: #9b63d2;
+    color: #dbd1d0;
+    box-shadow: 4px 20px 20px 3px #a09c9c;
+}
+
+.container-skills {
+    display: flex;
+    padding-top: 50px;
+    width: 50%;
+    align-items: center;
+    flex-direction: column;
+}
+
+.title {
+    position: relative;
+    top:15px;
+    color: #290700;
+    border: 1px solid;
+    border-radius: 10px;
+    padding: 5px;
+    background-color: #a8d53e;
+}
+
+.card-skills {
+    border-radius: 15px;
+    background-color: #fff;
+    width: 28em;
+    height: 25em;
+    box-shadow: 0px 2px 8px 3px #a09c9c;
+
+}
+
+
+.contact-github{
+    background-color: #9b63d2;
+    padding: 8px;
+    border-radius: 50%;
+    border: none;
+}
+
+
+.contact-linkedln{
+    background-color: #9b63d2;
+    padding: 4px;
+    border-radius: 30%;
+}
+
+.contact-whatsapp{
+    background-color: #9b63d2;
+    padding: 4px;
+    border-radius: 30%;
+}
+
+
+.my-picture img {
+    position: relative;
+    left: 10px;
+    border: 1px solid black;
+    margin-right: 20px;
+    width: 9em;
+    height: 11em;
+    border-radius: 10%;
+    background-color: #dbd1d0;
+    shape-outside: 15px;
+}
+
+
+/* .contact-github, .contact-linkedln, .contact-whatsapp {
     display: flex;
     align-items: center;
     height: 200px;
@@ -19,6 +152,6 @@
 .contact-whatsapp:hover .botton-whatsapp {
     transform: rotate(35deg);
     transition-duration: 2s;
-}
+} */
 
 
