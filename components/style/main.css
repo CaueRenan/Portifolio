@@ -98,12 +98,35 @@ main {
 
 
 .contact-github{
+    display: inline-block;
+    color: #ccc3c2;
     background-color: #9b63d2;
     padding: 8px;
     border-radius: 50%;
-    border: none;
+    transition: all 0.2 ease;
 }
 
+@keyframes circle-anim {
+    0%{
+
+    }
+
+    90%{
+        padding: 0.25em;
+        margin: -0.35em;
+    }
+
+    100%{
+        padding: 0.25em;
+        margin: -0.25em;
+    }
+}
+
+.contact-github:hover{
+    animation: circle-anim 0.3 ease;
+    transition: all 0.4s ease;
+    background-color: #a8d53e;
+}
 
 .contact-linkedln{
     background-color: #9b63d2;
