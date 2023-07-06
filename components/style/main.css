@@ -213,7 +213,7 @@ main {
     /* gap: 0em;
     top: 6em; */
 
-    gap: 3em;
+    gap: 2em;
     top: 13em;
     transition: gap 1s, top 1s 1s ease-in-out
 }
@@ -227,7 +227,7 @@ main {
     display: flex;
     position: relative;
     top: 0.5em;
-    transition: all 3s ease-in-out;
+    transition: all 3s ease-in;
 
 
 }
@@ -264,11 +264,10 @@ main {
         border-radius: 8px;
         background-color: #a8d53e;
         opacity: 0%;
-
     }
 
     60%{
-        top: 5em;
+        top: 0em;
         padding: 5px;
         border: 1px solid black;
         border-radius: 8px;
@@ -276,25 +275,8 @@ main {
         opacity: 0%;
     }
 
-
-    60%{
-        top: 3em;
-        padding: 5px;
-        border: 1px solid black;
-        border-radius: 8px;
-        background-color: #a8d53e;
-        opacity: 0%;
-    }
-
+ 
     70%{
-        top: 2em;
-        padding: 5px;
-        border: 1px solid black;
-        border-radius: 8px;
-        background-color: #a8d53e;
-        opacity: 0%;
-    }
-    75%{
         top: -1em;
         padding: 5px;
         border: 1px solid black;
@@ -302,6 +284,7 @@ main {
         background-color: #a8d53e;
         opacity: 100%;
     }
+    
 
 
     100%{
@@ -312,6 +295,8 @@ main {
         background-color: #a8d53e;
         opacity: 100%;
     }
+
+
 }
 
 .container-img-taferas{
