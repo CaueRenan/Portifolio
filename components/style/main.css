@@ -192,16 +192,83 @@ main {
 
 .back-card {
     display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    height: 90vh;
+}
+
+.back-container{
+    position: relative;
     width: 23em;
     height: 17em;
-    background-color: #a8d53e;
-    transition: all 1s ease-in-out;
+    top: 9em;
+    /* width: 0em;
+    height: 0em; */
 
+    background-color: #a8d53e;
+    transition: top 1s 5s, transform 1s, background-color 1s 1s, width 1s 2s, height 1s 2s ease-in-out;
 }
-.back-projects:hover .back-card{
+
+.back-projects:hover .back-container{
+    top: 0em;
     width: 0em;
     height: 0em;
+    transform: scale(0);
     background-color: none;
+}
+
+.back-text-tarefas{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    width: 0em;
+    height: 0em;
+    top: 0em;
+
+    /* width: 23em;
+    height: 23em;
+    top: 10em; */
+
+    background-color:#9b63d2;
+    transition: top 1s 1s, animation ease;
+}
+
+.back-projects:hover .back-text-tarefas{
+    top: 10em;
+    animation: expand 1s 3s forwards;
+}
+
+
+@keyframes expand {
+    0%{
+        width: 0em;
+        height: 0em;
+    }
+
+    50% {
+        width: 23em;
+        height: 1em;
+    }
+
+    100% {
+        width: 23em;
+        height: 23em;
+    }
+}
+
+.text-tarefas{
+    display: flex;
+    position: relative;
+    width: 20em;
+    top: 8em;
+    overflow: hidden;
+    opacity: 0%;
+    transition: all 1s 4s ease-in-out; 
+}
+
+.back-projects:hover .text-tarefas{
+    opacity: 100%;
 }
 
 .front-card {
@@ -210,11 +277,11 @@ main {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    gap: 3em;
+    top: 13em;
+    
     /* gap: 0em;
     top: 6em; */
-
-    gap: 2em;
-    top: 13em;
     transition: gap 1s, top 1s 1s ease-in-out
 }
 
@@ -228,7 +295,6 @@ main {
     position: relative;
     top: 0.5em;
     transition: all 3s ease-in;
-
 
 }
 
@@ -334,17 +400,6 @@ main {
         height: 140px;
     }
 }
-
-.container-summary-tarefas {
-    width: 0em;
-    height: 0em;
-}
-
-.text-tarefas{
-    visibility: hidden;
-    overflow: hidden;
-}
-
 /* .contact-github, .contact-linkedln, .contact-whatsapp {
     display: flex;
     align-items: center;
