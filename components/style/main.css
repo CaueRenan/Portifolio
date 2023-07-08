@@ -1,59 +1,71 @@
 * {
+    border: 0;
     margin: 0;
     padding: 0;
-    border: 0;
 }
 
 body {
     width: 100vw;
+    
     background-color: #dbd1d0;
 }
 
 header {
     display: flex;
-    width: 100%;
+    
     height: 90px;
+    width: 100%;
+    
     justify-content:space-between;
     align-items: center;
 }
 
 .links-header a {
-    padding: 7px;
-    color: #330d29;
-    background-color: #a8d53e;
-    text-decoration: none;
     border: 1px solid;
     border-radius: 10px;
-
+    padding: 7px;
+    
+    background-color: #a8d53e;
+    color: #330d29;
+    text-decoration: none;
 }
 
 .links-header {
     display: flex;
-    width: 50vw;
+    
     height: 100%;
+    width: 50vw;
+    
     background-color: #ccc3c2;
-    justify-content: center;
-    align-items: center;
-    gap: 10em;
     box-shadow: 8px 0px 15px 4px #a09c9c;
+    
+    align-items: center;
+    justify-content: center;
+    gap: 10em;
 }
 
 .contact {
     display: flex;
-    width: 50vw;
+    
     height: 100%;
-    gap: 11em;
-    justify-content: center;
-    align-items: center;
+    width: 50vw;
+    
     background-color: #9b63d2;
     box-shadow: 2px 10px 15px 3px #a09c9c;
+    
+    align-items: center;
+    justify-content: center;
+    gap: 11em;
 }
 
 .icons i{
     display: inline-block;
-    color: #ccc3c2;
-    background-color: #9b63d2;
+    
     border-radius: 50%;
+    
+    background-color: #9b63d2;
+    color: #ccc3c2;
+    
     transition: all 0.5s ease;
 }
 
@@ -95,39 +107,48 @@ header {
 
 .icons i:hover{
     padding: 12px;
-    color: #9b63d2;
+    
     background-color: #ccc3c2;
     box-shadow:inset 0px 4px 8px 1px #6e6b6b;
+    color: #9b63d2;
+    
+    animation: circle-anim 0.4s ease ;
     cursor: pointer;
     transition: all 0.5s ease;
-    animation: circle-anim 0.4s ease ;
 
 }
 
 
 main {
     display: flex;
-    width: 100vw;
+    
     height: 100vh;
+    width: 100vw;
+    
     justify-content: space-between;
 }
 
 .presentation {
     display: flex;
+    
     width: 50vw;
     padding-top: 60px;
+    
+    background-color: #9b63d2;
+    box-shadow: 4px 20px 20px 3px #a09c9c;
+    color: #dbd1d0;
+    
+    align-items: top;
     float: left;
     justify-content: center;
-    align-items: top;
-    background-color: #9b63d2;
-    color: #dbd1d0;
-    box-shadow: 4px 20px 20px 3px #a09c9c;
 }
 
 .container-skills {
     display: flex;
+    
     width: 50vw;
     padding-top: 50px;
+    
     align-items: center;
     flex-direction: column;
 }
@@ -135,29 +156,35 @@ main {
 .title {
     position: relative;
     top:15px;
-    color: #290700;
-    background-color: #a8d53e;
-    border: 1px solid;
+    
+    border: 1px solid black;
     border-radius: 10px;
     padding: 5px;
+    
+    color: #290700;
+    background-color: #a8d53e;
+    
 }
 
 .card-skills {
-    width: 28em;
     height: 25em;
-    background-color: #fff;
+    width: 28em;
+    
     border-radius: 15px;
     box-shadow: 0px 2px 8px 3px #a09c9c;
+    background-color: #fff;
 
 }
 
 .my-picture img {
     display: flex;
     position: relative;
-    width: 9em;
-    height: 11em;
     left: 10px;
+    
+    height: 11em;
+    width: 9em;
     margin-right: 20px;
+    
     background-color: #dbd1d0;
     border: 1px solid black;
     border-radius: 10%;
@@ -167,20 +194,26 @@ main {
 .projects {
     display: flex;
     position: absolute;
-    width: 100vw;
+    
     height: 100vh;
+    width: 100vw;
+    
+    background: #dbd1d0;
+    
     align-items: center;
     justify-content: center;
-    background: #dbd1d0;
 }
 
 .back-projects {
     display: flex;
-    width: 90vw;
+    
     height: 90vh;
+    width: 90vw;
+    
     background-color: #e6dede;
-    justify-content: center;
+    
     align-items: center;
+    justify-content: center;
 }
 
 .card {
@@ -192,78 +225,132 @@ main {
 
 .back-card {
     display: flex;
+    
+    height: 90vh;
+    
+    align-items: center;
     flex-direction: column;
     justify-content: start;
-    align-items: center;
-    height: 90vh;
 }
 
 .back-container{
-    position: relative;
+    position: absolute;
+    
+    top: 10em;
+    right: 27.8em;
     width: 23em;
     height: 17em;
-    top: 9em;
-    /* width: 0em;
+
+    /* top: 0em;
+    right: none;
+    width: 0em;
     height: 0em; */
 
+    border: 1.5px solid black;
+    border-radius: 5px;
+
     background-color: #a8d53e;
-    transition: top 1s 5s, transform 1s, background-color 1s 1s, width 1s 2s, height 1s 2s ease-in-out;
+    
+    transition: right 1s 3s, top 1s 5s, transform 1s, background-color 1s 1s, width 1s 2s, height 1s 2s ease-in-out;
 }
 
 .back-projects:hover .back-container{
     top: 0em;
-    width: 0em;
+    
     height: 0em;
-    transform: scale(0);
+    width: 0em;
+
+    right: none;
+    
     background-color: none;
+    
+    transform: scale(0);
+}
+
+.shadow-back-container{
+    display: flex;
+
+    height: 17em;
+    width: 23em;
+    
+    /* height: 0em;
+    width: 0em; */
+
+    margin-top: 9em;
+    border-radius: 5px;
+
+    background-color: #9b63d2;
+    border: 1.5px solid black;
+
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.rows {
+    height: 0.5em;
+    width: 23em;
+
+    background-color: #b9a7cb;
 }
 
 .back-text-tarefas{
     display: flex;
     position: relative;
-    justify-content: center;
+    
+    top: 0em;
     width: 0em;
     height: 0em;
-    top: 0em;
-
-    /* width: 23em;
-    height: 23em;
-    top: 10em; */
-
+    
+    /* top: 0em;
+    width: 23em;
+    height: 23em; */
+    
+    border: 1px solid black;
+    border-radius: 14px;
     background-color:#9b63d2;
+    
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    
     transition: top 1s 1s, animation ease;
 }
 
 .back-projects:hover .back-text-tarefas{
     top: 10em;
+    
     animation: expand 1s 3s forwards;
 }
 
 
 @keyframes expand {
     0%{
-        width: 0em;
         height: 0em;
+        width: 0em;
     }
 
     50% {
-        width: 23em;
         height: 1em;
+        width: 23em;
     }
 
     100% {
-        width: 23em;
         height: 23em;
+        width: 23em;
     }
 }
 
 .text-tarefas{
     display: flex;
     position: relative;
+    
     width: 20em;
-    top: 8em;
-    overflow: hidden;
+    
     opacity: 0%;
+    /* opacity: 100%; */
+    
+    overflow: hidden;
+
     transition: all 1s 4s ease-in-out; 
 }
 
@@ -271,31 +358,126 @@ main {
     opacity: 100%;
 }
 
-.front-card {
+.container-btn{
     display: flex;
-    position: absolute;
+    position: relative;
+    top: 3em;
+
+    opacity: 0%;
+    /* opacity: 100%; */
+    
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    gap: 3em;
-    top: 13em;
+
+    transition: all 1s 4s ease-in-out; 
+}
+
+.back-projects:hover .container-btn{
+    opacity: 100%;
+}
+
+.front-container-btn {
+    display: flex;
+    position: absolute;
+
+    right: 5px;
+    bottom: 5px;
+
+    height:3em;
+    width:9em;
+
+    border: 1.5px solid black;
     
-    /* gap: 0em;
-    top: 6em; */
-    transition: gap 1s, top 1s 1s ease-in-out
+    background-color: #fff;
+    /* background-color: #6e6b6b; */
+    
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.first-btn-link-tarefas {
+    display: flex;
+    
+    color: black;
+    text-decoration: none;
+
+    opacity: 100%;
+    /* opacity: 0%; */
+
+
+    align-items: center;
+    justify-content: center;
+}
+
+.second-btn-link-tarefas {
+    display: flex;
+    position: absolute;
+
+    color: black;
+    text-decoration: none;
+
+    opacity: 0%;
+    /* opacity: 100%; */
+    
+    align-items: center;
+    justify-content: center;
+
+}
+
+.back-container-btn {
+    display: flex;
+
+    height:3em;
+    width:9em;
+
+    border: 1.5px solid black;
+
+    background-color: #a8d53e;
+    /* background-color: #a8d53e; */
+}
+
+.front-card {
+    display: flex;
+    position: absolute;
+
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+    top: 12em;
+    right: 29em;
+
+    gap: 3em;
+    
+    /* top: 6em;
+    right: none;
+    gap: 0em; */
+
+    transition: gap 1s, right 1s 3s, top 1s 1s ease-in-out
 }
 
 .back-projects:hover .front-card{
-    gap: 0em;
     top: 6em;
+    right: none;
+    gap: 0em;
 }
 
 .title-projec-tarefas{
     display: flex;
     position: relative;
     top: 0.5em;
-    transition: all 3s ease-in;
 
+    
+    /* padding: 5px;
+    border: 1.5px solid black;
+    border-radius: 8px;
+    background-color: #a8d53e;
+    opacity: 100%; */
+    
+    transition: all 3s ease-in;
 }
 
 .back-projects:hover .title-projec-tarefas{
@@ -367,14 +549,13 @@ main {
 
 .container-img-taferas{
     display: flex;
+
+    border: 1.5px solid black;
 }
 
 .container-img-taferas img{
     width: 330px;
     height: 160px;
-
-    /* width: 390px;
-    height: 200px; */ 
 
     /* width: 300px;
     height: 140px; */
