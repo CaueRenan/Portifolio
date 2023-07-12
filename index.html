@@ -69,21 +69,10 @@
             </main>
             <section class="projects">
                 <section class="back-projects">
-                    <section class="card lista-tarefas">
+                    <section class="card lista-tarefas" id="card">
                         <div class="back-card">
-                            <div class="back-container"></div>
-                            <div class="shadow-back-container">
-                                <div class="rows"></div>
-                                <div class="rows"></div>
-                                <div class="rows"></div>
-                                <div class="rows"></div>
-                                <div class="rows"></div>
-                                <div class="rows"></div>
-                                <div class="rows"></div>
-                                <div class="rows"></div>
-                                <div class="rows"></div>
-                                <div class="rows"></div>
-                            </div>
+                            <div class="back-container" id="back-container"></div>
+                            <div class="shadow-back-container"></div>
                             <div class="back-text-tarefas">
                                 <div class="text-tarefas">
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam iure similique nostrum nesciunt adipisci velit necessitatibus, accusantium, itaque quas qui laboriosam dignissimos, omnis rem deleniti minus harum assumenda dolorem inventore.
@@ -98,9 +87,9 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="front-card">
+                        <div class="front-card click" id="front-card">
                             <div class="title-projec-tarefas">Lista de Tarefas</div>
-                            <article class="container-img-taferas">
+                            <article class="container-img-taferas" id="container-img-taferas">
                                 <img src="./components/style/img/screenshot-listaDeTarefas-react.png">
                             </article>
                         </div>
@@ -110,4 +99,42 @@
         </div>
     </div>
 </body>
+
+<script>
+    const backContainer = document.getElementById('back-container');
+    const frontCard = document.getElementById('front-card');
+    const img = document.getElementById('container-img-taferas').firstElementChild;
+
+    document.addEventListener(('click'), (e) => {
+        const arrayClass = [backContainer, frontCard]
+
+        if(e.target == frontCard || e.target == frontCard.firstElementChild || e.target == img){
+
+            for (let i of arrayClass) {
+                if(!i.classList.contains('click')){
+                    openCard(i, 'click')
+
+                }
+            }
+
+        } else {
+            for (let i of arrayClass){
+                if(i.classList.contains('click')){
+                    closedCard(i, 'click')
+                }
+            }
+        }
+
+    })
+
+    function openCard (element, string) {
+        element.classList.add(string)
+
+    }
+    function closedCard (element, string) {
+        element.classList.remove(string)
+    }
+
+</script>
+
 </html>

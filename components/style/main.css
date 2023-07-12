@@ -289,37 +289,52 @@ main {
     
     align-items: center;
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;
 }
 
 .back-container{
     position: absolute;
     
-    /* width: 23em;
     height: 17em;
-    margin-left: -1.5em;
-    margin-bottom: 1.5em;
-    border: 1.5px solid black; */
+    width: 23em;
+    margin-left: -1.5em; 
+    margin-top: 7.8em;
+    border: 1.5px solid black;
 
-    top: 0em;    
-    width: 0em;
+    /* width: 0em;
     height: 0em;
-    margin-left: none;
-    margin-bottom: none;
-    border: none;
+    margin-left: 0em;
+    margin-top: 0em;
+    border: 0px; */
 
     border-radius: 3px;
 
     background-color: #a8d53e;
     
-    transition: top 1s 5s, transform 1s, background-color 1s 1s, width 1s 2s, height 1s 2s ease-in-out;
+    /* transition: margin 1s 5s, transform 1s, background-color 1s 1s, width 1s 2s, height 1s 2s ease-in-out; */
+}
+.back-container.click{
+    position: absolute;
+    
+    height: 17em;
+    width: 23em;
+    margin-left: 0em; 
+    margin-top: 8.5em;
+    border: 1.5px solid black;
+
+    border-radius: 3px;
+
+    background-color: #a8d53e;
+    /* transition: all 1s ; */
+
 }
 
 .back-projects:hove .back-container{
-    top: 0em;
-    
     height: 0em;
     width: 0em;
+
+    margin-left: 0em;
+    margin-top: 0em;
     
     background-color: none;
     
@@ -329,44 +344,35 @@ main {
 .shadow-back-container{
     display: flex;
 
-    /* height: 17em;
-    width: 23em;
-    border: 1.5px solid black; */
     
-    height: 0em;
+    height: 17em;
+    width: 23em;
+    margin-top: 8.5em;
+    border: 1.5px solid black;
+    
+    /* height: 0em;
     width: 0em;
-    border: none;
+    margin-top: 0em;
+    border: 0em; */
 
     border-radius: 3px;
 
     background-color: #9b63d2;
-
-    flex-direction: column;
-    justify-content: space-around;
 }
-
-/* .rows {
-    display: flex;
-
-    height: 0.5em;
-    width: 23em;
-
-    background-color: #b9a7cb;
-} */
 
 .back-text-tarefas{
     display: flex;
     position: relative;
     
-    /* top: 0em;
     width: 0em;
     height: 0em;
-    border: none; */
+    border: none;
+    margin-top: 0em;
     
-    top: 4em;
-    width: 23em;
+    /* width: 23em;
     height: 23em;
-    border: 1px solid black;
+    margin-top: 10em;
+    border: 1px solid black; */
     
     border-radius: 14px;
     background-color:#9b63d2;
@@ -379,7 +385,7 @@ main {
 }
 
 .back-projects:hove .back-text-tarefas{
-    top: 4em;
+    margin-top: 10em;
     
     animation: expand 1s 3s forwards;
 }
@@ -425,8 +431,8 @@ main {
     position: relative;
     top: 3em;
 
-    /* opacity: 0%; */
-    opacity: 100%;
+    opacity: 0%;
+    /* opacity: 100%; */
     
     align-items: center;
     justify-content: center;
@@ -505,21 +511,41 @@ main {
     display: flex;
     position: absolute;
 
-    /* top: 12em;
+    top: 12em;
     gap: 3em;
-    margin-left: -2em;
-    margin-bottom: 2em; */
+    margin-left: -1.5em;
+    margin-top: -0.5em;
 
-    top: 6em;
+    /* top: 6em;
     gap: 0em;
     margin-left: none;
-    margin-bottom: none;
+    margin-bottom: none; */
     
     align-items: center;
     justify-content: center;
     flex-direction: column;
     
-    transition: gap 1s, right 1s 3s, top 1s 1s ease-in-out
+    transition: gap 1s, right 1s 3s, top 1s 1s ease-in-out;
+
+}
+
+.front-card.click {
+    display: flex;
+    position: absolute;
+
+    top: 12em;
+    gap: 3em;
+    margin-left: 0em;
+    margin-top: -0.5em;
+       
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+    transition: all 1s ;
+
+    transition: gap 1s, right 1s 3s, top 1s 1s ease-in-out;
+
 }
 
 .back-projects:hove .front-card{
@@ -533,11 +559,11 @@ main {
     top: 0.5em;
 
     
-    padding: 5px;
+    /* padding: 5px;
     border: 1.5px solid black;
     border-radius: 8px;
     background-color: #a8d53e;
-    opacity: 100%;
+    opacity: 100%; */
     
     transition: all 3s ease-in;
 }
@@ -616,11 +642,11 @@ main {
 }
 
 .container-img-taferas img{
-    /* width: 330px;
-    height: 160px; */
+    width: 330px;
+    height: 160px;
 
-    width: 300px;
-    height: 140px;
+    /* width: 300px;
+    height: 140px; */
 
     visibility: hidde;
 }
