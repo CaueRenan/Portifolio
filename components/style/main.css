@@ -85,12 +85,33 @@ header {
     display: inline-block;
     
     border-radius: 50%;
+    padding: 0px;
+    border: 0px;
+    
+    /* border-radius: 10%;
+    padding: 5px;
+    border: 1px solid black; */
+     
+    /* background-color: #ccc3c2;
+    color: #330d29; */
     
     background-color: #9b63d2;
     color: #ccc3c2;
-    
+
     transition: all 0.5s ease;
 }
+
+/* .icons .principais{
+    position: absolute;
+    
+    margin-left: 0.2em;
+    margin-top: -0.2em;
+}
+.icons .secundario{
+    background-color: #a8d53e;
+    border: 1px solid black;
+    color: #ccc3c2;
+} */
 
 
 @keyframes circle-anim{    
@@ -301,12 +322,6 @@ main {
     margin-top: 7.8em;
     border: 1.5px solid black;
 
-    /* width: 0em;
-    height: 0em;
-    margin-left: 0em;
-    margin-top: 0em;
-    border: 0px; */
-
     border-radius: 3px;
 
     background-color: #a8d53e;
@@ -316,44 +331,42 @@ main {
 .back-container.click{
     position: absolute;
     
-    height: 17em;
-    width: 23em;
+    height: 0em;
+    width: 0em;
     margin-left: 0em; 
-    margin-top: 8.5em;
+    margin-top: 0em;
+    /* margin-top: 8.5em; */
     border: 1.5px solid black;
 
     border-radius: 3px;
 
-    background-color: #a8d53e;
-    /* transition: all 1s ; */
-
-}
-
-.back-projects:hove .back-container{
-    height: 0em;
-    width: 0em;
-
-    margin-left: 0em;
-    margin-top: 0em;
-    
     background-color: none;
     
-    transform: scale(0);
+    /* transition: all 1s ; */
+
+    /* transform: scale(0); */
 }
 
 .shadow-back-container{
     display: flex;
 
-    
     height: 17em;
     width: 23em;
     margin-top: 8.5em;
     border: 1.5px solid black;
     
-    /* height: 0em;
+    border-radius: 3px;
+
+    background-color: #9b63d2;
+}
+
+.shadow-back-container.click {
+    display: flex;
+    
+    height: 0em;
     width: 0em;
     margin-top: 0em;
-    border: 0em; */
+    border: 0em;
 
     border-radius: 3px;
 
@@ -369,10 +382,24 @@ main {
     border: none;
     margin-top: 0em;
     
-    /* width: 23em;
+    border-radius: 14px;
+    background-color:#9b63d2;
+    
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    
+    /* transition: top 1s 1s, animation ease; */
+}
+
+.back-text-tarefas.click{
+    display: flex;
+    position: relative;
+    
+    width: 23em;
     height: 23em;
     margin-top: 10em;
-    border: 1px solid black; */
+    border: 1px solid black;
     
     border-radius: 14px;
     background-color:#9b63d2;
@@ -381,15 +408,9 @@ main {
     flex-direction: column;
     justify-content: center;
     
-    transition: top 1s 1s, animation ease;
+    /* transition: top 1s 1s, animation ease; */
+    /* animation: expand 1s 3s forwards; */
 }
-
-.back-projects:hove .back-text-tarefas{
-    margin-top: 10em;
-    
-    animation: expand 1s 3s forwards;
-}
-
 
 @keyframes expand {
     0%{
@@ -414,17 +435,24 @@ main {
     
     width: 20em;
     
-    /* opacity: 0%; */
-    opacity: 100%;
-    
+    opacity: 0%;    
     overflow: hidden;
 
-    transition: all 1s 4s ease-in-out; 
+    /* transition: all 1s 4s ease-in-out;  */
 }
 
-.back-projects:hove .text-tarefas{
-    opacity: 100%;
+.text-tarefas.click{
+    display: flex;
+    position: relative;
+    
+    width: 20em;
+    
+    opacity: 100%;    
+    overflow: visible;
+
+    /* transition: all 1s 4s ease-in-out;  */
 }
+
 
 .container-btn{
     display: flex;
@@ -432,79 +460,79 @@ main {
     top: 3em;
 
     opacity: 0%;
-    /* opacity: 100%; */
     
     align-items: center;
     justify-content: center;
     flex-direction: column;
 
-    transition: all 1s 4s ease-in-out; 
+    /* transition: all 1s 4s ease-in-out;  */
+
+    transition: 0.5s ;
+
 }
 
-.back-projects:hove .container-btn{
+.container-btn.click {
+    display: flex;
+    position: relative;
+    top: 3em;
+
     opacity: 100%;
+    
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    /* transition: all 1s 4s ease-in-out;  */
 }
 
-.front-container-btn {
+.btn-link-tarefas {
     display: flex;
     position: absolute;
 
-    right: 5px;
-    bottom: 5px;
-
-    height:3em;
-    width:9em;
-
+    margin-right: 11.2px;
+    margin-bottom: 11.2px;
+    height: 48px;
+    width: 144px;
     border: 1.5px solid black;
-    
-    background-color: #fff;
-    /* background-color: #6e6b6b; */
-    
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-
-}
-
-.first-btn-link-tarefas {
-    display: flex;
     
     color: black;
     text-decoration: none;
+    background-color: #fff;
 
     opacity: 100%;
     /* opacity: 0%; */
 
-
     align-items: center;
     justify-content: center;
-}
-
-.second-btn-link-tarefas {
-    display: flex;
-    position: absolute;
-
-    color: black;
-    text-decoration: none;
-
-    opacity: 0%;
-    /* opacity: 100%; */
-    
-    align-items: center;
-    justify-content: center;
-
 }
 
 .back-container-btn {
     display: flex;
 
-    height:3em;
-    width:9em;
+    height: 48px;
+    width: 144px;
 
     border: 1.5px solid black;
 
     background-color: #a8d53e;
-    /* background-color: #a8d53e; */
+
+    /* transition: 0.2s ; */
+}
+
+.container-btn:hover {
+    transform: rotateX(180deg);
+
+}
+.container-btn:hover .btn-link-tarefas{
+    /* color: #a8d53e; */
+    background-color: #a8d53e;
+    transform: rotateX(180deg);
+    margin-bottom: -11.2px;
+
+}
+
+.container-btn:hover .back-container-btn{
+    background-color: #fff;
 }
 
 .front-card {
@@ -515,17 +543,12 @@ main {
     gap: 3em;
     margin-left: -1.5em;
     margin-top: -0.5em;
-
-    /* top: 6em;
-    gap: 0em;
-    margin-left: none;
-    margin-bottom: none; */
     
     align-items: center;
     justify-content: center;
     flex-direction: column;
     
-    transition: gap 1s, right 1s 3s, top 1s 1s ease-in-out;
+    /* transition: gap 1s, right 1s 3s, top 1s 1s ease-in-out; */
 
 }
 
@@ -533,8 +556,8 @@ main {
     display: flex;
     position: absolute;
 
-    top: 12em;
-    gap: 3em;
+    top: 6em;
+    gap: 0em;
     margin-left: 0em;
     margin-top: -0.5em;
        
@@ -542,35 +565,33 @@ main {
     justify-content: center;
     flex-direction: column;
     
-    transition: all 1s ;
-
-    transition: gap 1s, right 1s 3s, top 1s 1s ease-in-out;
+    /* transition: all 1s ; */
+    /* transition: gap 1s, right 1s 3s, top 1s 1s ease-in-out; */
 
 }
 
-.back-projects:hove .front-card{
-    top: 6em;
-    gap: 0em;
-}
 
 .title-projec-tarefas{
     display: flex;
     position: relative;
     top: 0.5em;
-
     
-    /* padding: 5px;
+    /* transition: all 3s ease-in; */
+}
+
+.title-projec-tarefas.click {
+    display: flex;
+    position: relative;
+    top: 0.5em;
+
+    padding: 5px;
     border: 1.5px solid black;
     border-radius: 8px;
     background-color: #a8d53e;
-    opacity: 100%; */
-    
-    transition: all 3s ease-in;
-}
+    opacity: 100%;
 
-.back-projects:hove .title-projec-tarefas{
-    animation: move-title 3s forwards;
-
+    /* transition: all 3s ease-in; */
+    /* animation: move-title 3s forwards; */
 }
 
 @keyframes move-title {
@@ -645,15 +666,16 @@ main {
     width: 330px;
     height: 160px;
 
-    /* width: 300px;
-    height: 140px; */
-
-    visibility: hidde;
 }
 
-.back-projects:hove .container-img-taferas img{
-    animation: redux-expand 1s forwards;
+.container-img-taferas.card img{
+    width: 300px;
+    height: 140px;
+
+    /* animation: redux-expand 1s forwards; */
+
 }
+
 
 @keyframes redux-expand{
     0%{

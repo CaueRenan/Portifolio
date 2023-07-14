@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./components/style/main.css">
     <link rel="stylesheet" href="https://cdn.es.gov.br/fonts/font-awesome/css/font-awesome.min.css">
 
-    <title>Portifílio</title>
+    <title>Portifólio</title>
 </head>
 <body>
     <div class="allcontent">
@@ -15,17 +15,20 @@
             <section class="contact">
                 <article class="icons github">
                     <a href="#">
-                        <i class="fa fa-github-alt fa-2x" aria-hidden="true"></i>
+                        <i class="fa fa-github-alt fa-2x principais" aria-hidden="true"></i>
+                        <!-- <i class="fa fa-github-alt fa-2x secundario" aria-hidden="true"></i> -->
                     </a>
                 </article>
                 <article class="icons linkedin">
                     <a href="#">
-                        <i class="fa fa-linkedin fa-2x" aria-hidden="true"></i>
+                        <i class="fa fa-linkedin fa-2x principais" aria-hidden="true"></i>
+                        <!-- <i class="fa fa-linkedin fa-2x secundario" aria-hidden="true"></i> -->
                     </a>
                 </article>
                 <article class="icons whatsapp">
                     <a href="#">
-                        <i class="fa fa-whatsapp fa-2x" arial-hidden="true"></i>
+                        <i class="fa fa-whatsapp fa-2x principais" arial-hidden="true"></i>
+                        <!-- <i class="fa fa-whatsapp fa-2x secundario" arial-hidden="true"></i> -->
                     </a>
                 </article>
             </section>
@@ -72,23 +75,20 @@
                     <section class="card lista-tarefas" id="card">
                         <div class="back-card">
                             <div class="back-container" id="back-container"></div>
-                            <div class="shadow-back-container"></div>
-                            <div class="back-text-tarefas">
-                                <div class="text-tarefas">
+                            <div class="shadow-back-container" id="shadow-back-container"></div>
+                            <div class="back-text-tarefas" id="back-text-tarefas">
+                                <div class="text-tarefas" id="text-tarefas">
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam iure similique nostrum nesciunt adipisci velit necessitatibus, accusantium, itaque quas qui laboriosam dignissimos, omnis rem deleniti minus harum assumenda dolorem inventore.
                                 </div>
                                 
-                                <div class="container-btn">
-                                    <div class="front-container-btn">
-                                        <a href="#" class="first-btn-link-tarefas">VISITE O</a>                                    
-                                        <a href="#" class="second-btn-link-tarefas">PROJETO</a>                                    
-                                    </div>
+                                <div class="container-btn" id="container-btn" onmouseover="overBtn()" onmouseout="outBtn()">
+                                    <a href="#" class="btn-link-tarefas" id="btn-link-tarefas" >VISITE O</a>                                    
                                     <div class="back-container-btn"></div>
                                 </div>
                             </div>
                         </div>
-                        <div class="front-card click" id="front-card">
-                            <div class="title-projec-tarefas">Lista de Tarefas</div>
+                        <div class="front-card" id="front-card">
+                            <div class="title-projec-tarefas" id="title-projec-tarefas">Lista de Tarefas</div>
                             <article class="container-img-taferas" id="container-img-taferas">
                                 <img src="./components/style/img/screenshot-listaDeTarefas-react.png">
                             </article>
@@ -103,10 +103,25 @@
 <script>
     const backContainer = document.getElementById('back-container');
     const frontCard = document.getElementById('front-card');
-    const img = document.getElementById('container-img-taferas').firstElementChild;
+    const shadowBackContainer = document.getElementById('shadow-back-container');
+    const backTextTarefas = document.getElementById('back-text-tarefas');
+    const textTarefas = document.getElementById('text-tarefas');
+    const containerBtn = document.getElementById('container-btn');
+    const titleProjecTarefas = document.getElementById('title-projec-tarefas');
+    const containerImgTaferas = document.getElementById('container-img-taferas');
 
     document.addEventListener(('click'), (e) => {
-        const arrayClass = [backContainer, frontCard]
+        const img = containerImgTaferas.firstElementChild
+        const arrayClass = [
+            backContainer,
+            frontCard,
+            shadowBackContainer,
+            backTextTarefas,
+            textTarefas,
+            containerBtn,
+            titleProjecTarefas,
+            containerImgTaferas
+        ]
 
         if(e.target == frontCard || e.target == frontCard.firstElementChild || e.target == img){
 
@@ -133,6 +148,20 @@
     }
     function closedCard (element, string) {
         element.classList.remove(string)
+    }
+
+    function overBtn(){
+        const btnLinkTarefa = document.getElementById('btn-link-tarefas')
+        
+        btnLinkTarefa.text = 'PROJETO'
+
+
+    }
+    function outBtn(){
+        const btnLinkTarefa = document.getElementById('btn-link-tarefas')
+
+        btnLinkTarefa.text = 'VISITE O'
+
     }
 
 </script>
